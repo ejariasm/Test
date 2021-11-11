@@ -133,6 +133,16 @@ public class TicTacToeActivity extends AppCompatActivity {
         mBoardButtons[8] = (Button) findViewById(R.id.nine);
         mInfoTextView = (TextView) findViewById(R.id.information);
         mGame = new TicTacToeGame();
+        mInfoTextView = (TextView) findViewById(R.id.information);
+        human = (TextView) findViewById(R.id.humanScore);
+        pcScore = (TextView) findViewById(R.id.pcScore);
+        empate = (TextView) findViewById(R.id.empate);
+        human.setText(humanSc.toString());
+        pcScore.setText(androidScore.toString());
+        empate.setText(empateScore.toString());
+        humanStarts=true;
+        toast = Toast.makeText(this,"",Toast.LENGTH_SHORT);
+        selected = 0;
         startNewGame();
     }
 
